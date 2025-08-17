@@ -1,0 +1,15 @@
+{
+  "name": "ramen-cooking-game",
+  "version": "1.0.0",
+  "description": "A web-based ramen cooking game with highscores and leaderboard.",
+  "main": "server.js",
+  "scripts": {
+    "start": "/usr/bin/node server.js"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramen Cooking Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🍜 Ramen Cooking Game</h1>
+    <div id="username-section">
+      <input type="text" id="username" maxlength="20" placeholder="Enter your username">
+      <button id="start-btn">Start Game</button>
+    </div>
+    <div id="game-section" class="hidden">
+      <div id="order-area">
+        <h2>Order</h2>
+        <div id="order-details"></div>
+      </div>
+      <div id="bowl-area">
+        <h2>Your Bowl</h2>
+        <div id="bowl-visual"></div>
+        <button id="reset-bowl">Clear Bowl</button>
+      </div>
+      <div id="ingredients-area">
+        <h2>Ingredients</h2>
+        <div id="broth-buttons" class="ingredient-group"></div>
+        <div id="noodle-buttons" class="ingredient-group"></div>
+        <div id="topping-buttons" class="ingredient-group"></div>
+      </div>
+      <div id="controls-area">
+        <button id="submit-order">Submit Order</button>
+      </div>
+      <div id="score-timer-area">
+        <span id="score-display">Score: 0</span>
+        <span id="timer-display">Time: 60</span>
+      </div>
+    </div>
+    <div id="highscore-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Highscores</h2>
+        <ul id="highscore-list"></ul>
+        <button id="play-again">Play Again</button>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
