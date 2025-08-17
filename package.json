@@ -4,7 +4,7 @@
   "description": "A web-based ramen cooking game with highscores and leaderboard.",
   "main": "server.js",
   "scripts": {
-    "start": "/usr/bin/node server.js"
+    "start": "node server.js"
   },
   "author": "Your Name",
   "license": "MIT",
