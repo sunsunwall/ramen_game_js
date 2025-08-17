@@ -1,0 +1,17 @@
+# Essential - always include these
+node_modules/
+.env
+.git/
+
+# Very useful
+npm-debug.log*
+.gitignore
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Nice to have
+.vscode/
+coverage/
+README.md
+.DS_Store
