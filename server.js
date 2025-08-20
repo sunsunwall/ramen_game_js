@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
+const path = require('node:path');
 const { initStorage, saveScore, getHighscores } = require('./database');
 
 const app = express();
@@ -14,11 +14,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 initStorage();
 
 // API Endpoints
-app.get('/api/highscores', async (req, res) => {
+app.get('/api/highscores', async (_req, res) => {
   try {
     const scores = await getHighscores();
     res.json(scores);
-  } catch (err) {
+  } catch (_err) {
     res.status(500).json({ error: 'Failed to fetch highscores.' });
   }
 });
@@ -31,12 +31,9 @@ app.post('/api/highscores', async (req, res) => {
   try {
     await saveScore(username, score);
     res.json({ success: true });
-  } catch (err) {
+  } catch (_err) {
     res.status(500).json({ error: 'Failed to save score.' });
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Ramen Cooking Game server running at http://localhost:${PORT}`);
-});
-
+app.listen(PORT, () => {});

@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 const DB_PATH = path.join(__dirname, 'highscores.json');
 
@@ -17,14 +17,14 @@ function saveScore(username, score) {
       let db;
       try {
         db = JSON.parse(data);
-      } catch (e) {
+      } catch (_e) {
         db = { scores: [] };
       }
       const newScore = {
         id: Date.now(),
         username: username.trim().slice(0, 20),
         score,
-        date: new Date().toISOString()
+        date: new Date().toISOString(),
       };
       db.scores.push(newScore);
       db.scores.sort((a, b) => b.score - a.score);
@@ -44,7 +44,7 @@ function getHighscores() {
       let db;
       try {
         db = JSON.parse(data);
-      } catch (e) {
+      } catch (_e) {
         db = { scores: [] };
       }
       resolve(db.scores);
