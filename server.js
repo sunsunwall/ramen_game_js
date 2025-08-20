@@ -39,3 +39,4 @@ app.post('/api/highscores', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Ramen Cooking Game server running at http://localhost:${PORT}`);
 });
+
