@@ -31,4 +31,4 @@ jobs:
       run: npx @biomejs/biome lint .
       
     - name: Run Biome formatter check
-      run: npx @biomejs/biome format . --check
+      run: npx @biomejs/biome format .
