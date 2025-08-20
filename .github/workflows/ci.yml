@@ -4,9 +4,11 @@ on:
     push:
         branches:
             - main
+            - secondary
     pull_request:
         branches:
             - main
+              - secondary
 
 jobs:
   lint-and-test:
